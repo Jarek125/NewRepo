@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<easyx.h>
 #include<iostream>
-#include"Minesweeper.h"
+#include"head.h"
+#include<Windows.h>
 
 using namespace std;
 
@@ -10,6 +11,9 @@ bool isInrect(ExMessage* msg, int x, int y, int w, int h);
 
 int main()
 {
+	//HWND hwnd = GetForegroundWindow();
+	//ShowWindow(hwnd, SW_HIDE);
+
 	initgraph(600, 400);
 	
 	IMAGE img;
@@ -32,20 +36,25 @@ int main()
 		}
 	}
 
-	getchar();
 	return 0;
 }
 
 
 void stratupScene(ExMessage* msg)
 {
-	if (isInrect(msg, 242, 170, 352, 246))
+	if (isInrect(msg, 242, 170, 352-242, 246-170))
 	{
 		exit(-1);
 	}
-	else if (isInrect(msg, 90, 65, 200, 140))
+	else if (isInrect(msg, 90, 65, 200-90, 140-65))
 	{
 		Minesweeper();
+		cout << "closeMinesweeper" << endl;
+		return;
+	}
+	else if (isInrect(msg, 240, 65, 355-240, 140-65))
+	{
+		_2048();
 		cout << "closeMinesweeper" << endl;
 		return;
 	}

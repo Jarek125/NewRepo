@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 #include<easyx.h>
+
 using namespace std;
 
 #define ROW 10

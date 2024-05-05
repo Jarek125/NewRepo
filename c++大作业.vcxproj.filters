@@ -26,7 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Minesweeper.h">
+    <ClInclude Include="head.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
