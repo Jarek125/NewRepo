@@ -55,7 +55,13 @@ void stratupScene(ExMessage* msg)
 	else if (isInrect(msg, 240, 65, 355-240, 140-65))
 	{
 		_2048();
-		cout << "closeMinesweeper" << endl;
+		cout << "close_2048" << endl;
+		return;
+	}
+	else if (isInrect(msg, 390, 65, 520 - 390, 140 - 65))
+	{
+		Gomoku();
+		cout << "closeGomoku" << endl;
 		return;
 	}
 }

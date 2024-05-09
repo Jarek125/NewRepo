@@ -24,7 +24,8 @@ enum Color
 	twoTo11 = RGB(242, 17, 158),
 	back = RGB(187, 173, 160)
 };
-Color arr[13] = { zero,twoTo1,twoTo2,twoTo3,twoTo4,twoTo5,twoTo6,twoTo7,twoTo8,twoTo9,twoTo10,twoTo11,back };
+Color arr[13] = { zero,twoTo1,twoTo2,twoTo3,twoTo4,twoTo5,twoTo6,
+				  twoTo7,twoTo8,twoTo9,twoTo10,twoTo11,back };
 int map[MAX_GRID][MAX_GRID];//全局变量初始化为0
 POINT pos[MAX_GRID][MAX_GRID];//内部存有x，y
 int num[15] = { 0,2,4,8,16,32,64,128,256,512,1024,2048 };
@@ -358,6 +359,6 @@ void winGame()
 		cleardevice();
 		closegraph();
 		memset(map, 0, MAX_GRID * MAX_GRID * sizeof(int));
-		J=-1;//
+		J=-1;//判断结束条件
 	}
 }
